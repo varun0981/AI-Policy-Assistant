@@ -91,9 +91,7 @@ embedding_model = load_embedding_model()
 # -------------------------------
 # CHROMADB
 # -------------------------------
-client = chromadb.PersistentClient(
-    path="vectordb"
-)
+client = chromadb.Client()
 
 collection = client.get_or_create_collection(
     name="company_policies"
